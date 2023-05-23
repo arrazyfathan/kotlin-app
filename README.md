@@ -1,4 +1,4 @@
-# kotlin_app
+# Kotlin Apps
 
 A new Flutter project.
 
