@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class KmmPage extends StatelessWidget {
-  const KmmPage({Key? key}) : super(key: key);
+  const KmmPage({
+    super.key,
+    required this.title,
+  });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class KmmPage extends StatelessWidget {
               height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(16,0,0,0),
+              padding: const EdgeInsets.fromLTRB(16, 0, 0, 0),
               child: Image.asset(
                 'images/kmm.png',
                 width: 100,
@@ -26,13 +31,26 @@ class KmmPage extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 0, 0),
+              child: Text(
+                title,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
             const Padding(
-              padding: EdgeInsets.fromLTRB(16,0,0,0),
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
               child: Text(
                 'Share code on your terms and for different platforms.',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 18,
                     fontWeight: FontWeight.normal),
               ),
             ),
