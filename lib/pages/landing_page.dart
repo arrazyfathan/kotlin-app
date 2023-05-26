@@ -29,7 +29,7 @@ class _LandingPageState extends State<LandingPage> {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 45,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 10.0,

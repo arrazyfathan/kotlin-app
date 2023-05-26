@@ -2,8 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String imagesGeneral = 'images/general.png';
   static const String imagesKmm = 'images/kmm.png';
   static const String imagesKotlin = 'images/kotlin.png';
+  static const String imagesKotlinconf23Recording = 'images/kotlinconf23_recording.png';
   static const String imagesOne = 'images/one.jpg';
   static const String imagesTwo = 'images/two.jpg';
 

@@ -21,7 +21,7 @@ class FeatureBoxWidget extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       decoration: BoxDecoration(
           color: const Color.fromARGB(211, 54, 54, 54),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: Colors.white30,
             width: 1.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kotlin_app/generated/assets.dart';
 import 'package:kotlin_app/pages/widget/feature_container_widget.dart';
 import 'package:kotlin_app/pages/widget_catalog_page.dart';
 
@@ -105,11 +106,10 @@ class _HomePageState extends State<HomePage> {
               ),
               ListTile(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const WidgetCatalog();
-                    })
-                  );
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return const WidgetCatalog();
+                  }));
                 },
                 title: const Text(
                   'Widget Catalog',
@@ -126,8 +126,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-                'https://kotlinlang.org/assets/images/twitter/general.png'),
+            Image.asset(Assets.imagesGeneral),
             const SizedBox(
               height: 10.0,
             ),
@@ -248,6 +247,51 @@ class _HomePageState extends State<HomePage> {
               subtitle: 'Recommended by Google for building Android Apps',
               redirect: 'to_android',
             ),
+            const SizedBox(
+              height: 16,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Latest from Kotlin',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 18),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Image.asset('images/latest.png'),
+                  ]),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Container(
+              color: Colors.white,
+              child: Stack(
+                children: [
+                  SizedBox(
+                    height: 400,
+                    width: double.infinity,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 0, 0),
+                    child: Text(
+                      'Koltin Usage Highlight',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
