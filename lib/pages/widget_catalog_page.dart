@@ -38,6 +38,11 @@ import 'package:kotlin_app/pages/widget/choice_chip.dart';
 import 'package:kotlin_app/pages/widget/circle_avatar.dart';
 import 'package:kotlin_app/pages/widget/circular_progress_indicator.dart';
 import 'package:kotlin_app/pages/widget/clip_oval.dart';
+import 'package:kotlin_app/pages/widget/clip_path.dart';
+import 'package:kotlin_app/pages/widget/clip_r_rect.dart';
+import 'package:kotlin_app/pages/widget/clip_rect.dart';
+import 'package:kotlin_app/pages/widget/close_button.dart';
+import 'package:kotlin_app/pages/widget/colored_box.dart';
 
 class WidgetCatalog extends StatelessWidget {
   const WidgetCatalog({Key? key}) : super(key: key);
@@ -141,6 +146,11 @@ class WidgetCatalog extends StatelessWidget {
                 const CircleAvatarWidget(),
                 const CircularProgressIndicatorWidget(),
                 const ClipOvalWidget(),
+                const ClipPathWidget(),
+                const ClipRectWidget(),
+                const ClipRRectWidget(),
+                const CloseButtonWidget(),
+                const ColoredBoxWidget(),
               ],
             ),
           ),
