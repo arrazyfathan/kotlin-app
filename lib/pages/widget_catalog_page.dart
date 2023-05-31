@@ -43,6 +43,13 @@ import 'package:kotlin_app/pages/widget/clip_r_rect.dart';
 import 'package:kotlin_app/pages/widget/clip_rect.dart';
 import 'package:kotlin_app/pages/widget/close_button.dart';
 import 'package:kotlin_app/pages/widget/colored_box.dart';
+import 'package:kotlin_app/pages/widget/column.dart';
+import 'package:kotlin_app/pages/widget/constaint_box.dart';
+import 'package:kotlin_app/pages/widget/container_widget.dart';
+import 'package:kotlin_app/pages/widget/cupertino/cupertino_action_sheet_action.dart';
+import 'package:kotlin_app/pages/widget/cupertino/cupertino_page_scaffold.dart';
+import 'package:kotlin_app/pages/widget/cupertino/cuppertino_app.dart';
+import 'package:kotlin_app/pages/widget/cupertino/material_banner.dart';
 
 class WidgetCatalog extends StatelessWidget {
   const WidgetCatalog({Key? key}) : super(key: key);
@@ -151,6 +158,29 @@ class WidgetCatalog extends StatelessWidget {
                 const ClipRRectWidget(),
                 const CloseButtonWidget(),
                 const ColoredBoxWidget(),
+                const ConstraintBoxWidget(),
+                const ContainerWidget(),
+                const ColumnWidget(),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const CupertinoAppWidget();
+                        }));
+                  },
+                  child: const Text('To Cupertino'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const CupertinoPageScaffoldWidget();
+                        }));
+                  },
+                  child: const Text('All Cupertino'),
+                ),
+                const CupertinoActionSheetActionWidget(),
+                const MaterialBannerWidget(),
               ],
             ),
           ),
