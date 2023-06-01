@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kotlin_app/generated/assets.dart';
+import 'package:kotlin_app/state_management/basic_state_management/state_management_page.dart';
 import 'package:kotlin_app/pages/widget/feature_container_widget.dart';
 import 'package:kotlin_app/pages/widget_catalog_page.dart';
 
@@ -113,6 +114,21 @@ class _HomePageState extends State<HomePage> {
                 },
                 title: const Text(
                   'Widget Catalog',
+                  style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+              ListTile(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return const StateManagementPage();
+                  }));
+                },
+                title: const Text(
+                  'State Management',
                   style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
