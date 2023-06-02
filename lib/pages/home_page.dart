@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kotlin_app/generated/assets.dart';
+import 'package:kotlin_app/pages/state_management_main_page.dart';
 import 'package:kotlin_app/state_management/basic_state_management/state_management_page.dart';
 import 'package:kotlin_app/pages/widget/feature_container_widget.dart';
 import 'package:kotlin_app/pages/widget_catalog_page.dart';
@@ -124,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return const StateManagementPage();
+                    return const StateManagementMainPage();
                   }));
                 },
                 title: const Text(
